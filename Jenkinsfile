@@ -3,6 +3,9 @@ pipeline {
   tools {
     maven 'Maven'
   }
+  environment {
+    SONAR_TOKEN = credentials('sonar')
+  }
   stages {
     stage ('Initialize') {
       steps {
@@ -31,7 +34,7 @@ pipeline {
      }
      stage ('SAST') {
       steps {
-        withSonarQubeEnv('sonar') {
+         withCredentials([string(credentialsId: 'sonar', variable: 'SONAR_TOKEN')]) {
           sh 'mvn sonar:sonar'
           sh 'cat target/sonar/report-task.txt'
         }
