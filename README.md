@@ -1,28 +1,27 @@
 
-# README
+# DevSecOps - Implementing Secure CI/CD PipelinesDME
 
-This is a sample Web Application to use during Continuous Integration demos.
+This is a sample Web Application from DEVSECOPS#1  Introduction - Implementing Secure CI/CD Pipelines [demo](https://youtu.be/egTi9U9vw3E)
 
 ## Build Instruction
 
 ```text
-mvn clean package
-
+mvn clean package #Leveraging Maven
 ```
 
-## Deploy instruction
+## High Level Overview
 
-Deploy ```target/WebApp.war``` on Tomcat
-[here](https://github.com/d0uble3L/webapp/blob/master/Jenkinsfile#L23)
+Deploys JAVA application ```target/WebApp.war``` on Tomcat Web Server. This is a jenkins CI/CD pipleine that has security checks. (DevSecOp)
 
-## TODO
+## Tools
 
-Tools
-Jenkins - Pipeline
-Github - Source Code Manager
-TruffleHog - Secrets Scanner (docker)
-owasp/dependency-check - Software Composition Analysis (SCA)(bash script)
-Sonarqube - SAST (docker container)
-Maven - Build ( running on instance)
-Tomcat - Web HTTP server that run java code (running on instance)
-Zap - DAST (running on docker)
+- Jenkins - Pipeline
+- Github - Source Code Manager
+- TruffleHog - Secrets Scanner (docker)
+- owasp/dependency-check - Software Composition Analysis (SCA)(bash script)
+- Sonarqube - SAST (docker container)
+- Maven - Build ( running on instance)
+- Tomcat - Web HTTP server that run java code (running on instance)
+- Zap - DAST (running on docker)
+
+![Example](./cicd-example-piepline.png)
