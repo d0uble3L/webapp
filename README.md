@@ -24,4 +24,4 @@ Deploys JAVA application ```target/WebApp.war``` on Tomcat Web Server. This is a
 - Tomcat - Web HTTP server that run java code (running on instance)
 - Zap - DAST (running on docker)
 
-![Example](../cicd-example-piepline.png)
+![Example](cicd-example-piepline.png)
